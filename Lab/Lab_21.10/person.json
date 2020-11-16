@@ -1,0 +1,12 @@
+{
+    "first": "Peter",
+    "second": "Plamenov",
+    "third":"Petrov",
+    "age": 10,
+    "birth": 2010,
+    "month":"07",
+    "day": 22,
+    "email":"nono@gmail.com",
+    "myHello":"function(){console.log('Hello, guys!')}",
+    "type()":"function type(){console.log(typeof(person))}"
+}
