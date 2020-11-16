@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <title>BGN to EUR Converter</title>
+    <style>
+     body {
+    font-family: 'Lato', sans-serif;
+    color: #FFFFFF;
+}
+
+.content-form {
+    width: 50%;
+    margin: 5% auto;
+    background: #234465;
+    padding: 5px 10px 10px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px #808080, 5px 5px 10px #6793c1 inset;
+}
+
+.currency-value {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.title {
+    text-align: center;
+}
+
+.item-currency {
+    font-weight: 700;
+}
+
+.currency {
+    margin: auto;
+    padding-bottom: 15px;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.primary-btn {
+    margin: auto;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    background-color: #ffa000;
+    color: #FFFFFF;
+    font-weight: 700;
+}
+    </style>
+</head>
+<body>
+    <form class="content-form">
+        <h2 class="title">BGN to EUR Converter</h2>
+        <section class="items">
+            <label for="bgn" class="currency">
+                <span class="item-currency">BGN: </span>
+                <input class="currency-value" type="number" id="bgn" value="0" />
+            </label>
+            <label for="euro" class="currency">
+                <span class="item-currency">EUR: </span>
+                <input class="currency-value" type="text" id="euro" readonly />
+            </label>
+            <input class="primary-btn" type="button" onclick="eurConverter()" value="Convert!" />
+        </section>
+    </form>
+    <script>
+        function eurConverter() {
+    let bgn = document.getElementById("bgn").value;
+    let eur = (bgn / 1.95583).toFixed(2);
+    document.getElementById("euro").value = eur;    
+}
+    </script>
+
+</body>
+</html>
